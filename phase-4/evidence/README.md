@@ -1,1 +1,1 @@
-## Store all of your screenshots here,
+Store all of your screenshots here,
