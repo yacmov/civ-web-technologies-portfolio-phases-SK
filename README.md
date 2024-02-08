@@ -4,9 +4,8 @@ To use this folder structure
 ## Git clone the folder structure then:
 - delete the .git folder (remember it may be hidden)
 - create a repository in your own GitHub account
-Then conect your repositroy by doing the following
-- Navigate to your local project directory
-cd /path/to/your/project
+- then conect your repositroy by doing the following
+- navigate to your local project directory e.g. cd /path/to/your/project
 
 
 ## Initialize the local directory as a Git repository
@@ -31,14 +30,14 @@ git push -u origin master
 ## Now you are ready to work on each individual phase
 - finalise and push phase 1 when you are due to complete the assessment
 - at this point download your zip file and submit the complete code and the assessment document to blackboard
-- Copy the files from phase 1 into phase 2
+- copy the files from phase 1 into phase 2
 - then commit and push the start of phase 2
-- 
-The assets folder should contain the images, css, JS, fonts and media for each of your phase
 
-The screenshots required in each phase should be saved in the evidence folder for that pahse
+## The assets folder should contain the images, css, JS, fonts and media for each of your phase
 
-Example: you can have the following css files in your CSS folder
+## The screenshots required in each phase should be saved in the evidence folder for that phase
+
+## Example: you can have the following phase specific css files in your CSS folder
         - phase-1.css
         - phase-2.css
         - phase-3.css
