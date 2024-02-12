@@ -1,15 +1,8 @@
 ## civ-web-technologies-portfolio-phases
 To use this folder structure 
 
-## Git clone the folder structure then:
-- delete the .git folder (remember it may be hidden)
-- create a repository in your own GitHub account
-- then conect your repositroy by doing the following
+## Fork the repository to your personall GitHub account
 - navigate to your local project directory e.g. cd /path/to/your/project
-
-
-## Initialize the local directory as a Git repository
-git init
 
 ## Add the files in your new local repository. This stages them for the first commit.
 git add .
