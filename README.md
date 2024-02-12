@@ -18,7 +18,7 @@ git remote add origin <remote repository URL>
 git remote -v
 
 ## Push the changes in your local repository to GitHub.
-git push -u origin master
+git push -u origin main
 
 ## Now you are ready to work on each individual phase
 - finalise and push phase 1 when you are due to complete the assessment
