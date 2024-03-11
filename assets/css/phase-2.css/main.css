@@ -35,6 +35,8 @@ article {
         display: block;
     }
     .header {
+        position: fixed;
+        width: 100%;
 
     }
     .navigation {
