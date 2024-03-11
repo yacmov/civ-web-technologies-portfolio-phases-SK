@@ -19,6 +19,10 @@
     background-color: #999;
 }
 
+article {
+    border: 1px solid black;
+}
+
 .mobile_view {
     display: none;
 }
