@@ -47,6 +47,16 @@ article {
     .main {
 
     }
+    #main_frame {
+        width: 60%;
+        float: left;
+    }
+
+    #aside_frame {
+        width: 40%;
+        float: right;
+    }
+
     .footer {
         
     }
