@@ -17,6 +17,9 @@
 
 .footer {
     background-color: #999;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 article {
