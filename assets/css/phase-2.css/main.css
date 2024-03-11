@@ -25,13 +25,15 @@
 
 @media (min-width: 768px) and (orientation: landscape){
     .mobile_view {
-        display: flex;
+        display: block;
     }
     .header {
 
     }
     .navigation {
-        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
     }
 
 }
