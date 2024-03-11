@@ -13,6 +13,7 @@
 
 .main {
     background-color: #666;
+    margin-top: 0px;
 }
 
 .footer {
@@ -45,15 +46,20 @@ article {
         justify-content: space-evenly;
     }
     .main {
+        margin-top: 133px;
+
 
     }
     #main_frame {
         width: 60%;
         float: left;
+        margin-left: 10%;
     }
 
     #aside_frame {
-        width: 40%;
+        width: 20%;
+        padding-left: 5%;
+        margin-right: 10%;
         float: right;
     }
 
