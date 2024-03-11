@@ -51,15 +51,15 @@ article {
 
     }
     #main_frame {
-        width: 60%;
+        width: 70%;
         float: left;
-        margin-left: 10%;
+        margin-left: 5%;
     }
 
     #aside_frame {
         width: 20%;
-        padding-left: 5%;
-        margin-right: 10%;
+        padding-left: 2%;
+        margin-right: 5%;
         float: right;
     }
 
