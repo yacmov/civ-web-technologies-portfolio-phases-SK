@@ -31,7 +31,13 @@ article {
     display: none;
 }
 
-@media (min-width: 768px) and (orientation: landscape){
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+@media screen and (min-width: 768px){
     .mobile_view {
         display: block;
     }
@@ -40,14 +46,9 @@ article {
         width: 100%;
 
     }
-    .navigation {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-    .main {
-        margin-top: 133px;
 
+    .main {
+        margin: 133px 0px 105px 0;
 
     }
     #main_frame {
@@ -67,4 +68,15 @@ article {
         
     }
 
+}
+
+
+@media screen and (min-width: 1200px) {
+    body {
+        font-size: 1.5rem;
+    }
+    .main {
+        margin: 190px 0px 145px 0;
+
+    }
 }
