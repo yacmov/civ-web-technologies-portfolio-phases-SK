@@ -1,1 +1,1 @@
-Keep you phase 1 code here, store all of your screenshots in the evident folder
+Keep you phase 1 code here, store all of your screenshots in the evidence folder
