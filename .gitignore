@@ -3,4 +3,5 @@
 *.pdf
 *.zip
 .DC_Store
+*/.DC_Store
 *test*.html
