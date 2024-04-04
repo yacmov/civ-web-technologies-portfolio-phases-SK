@@ -30,11 +30,11 @@
 }
 
 .menu-icon::before{
-    transform: translate(-20px, -12px);
+    transform: translate(0px, -12px);
 }
 
 .menu-icon::after{
-    transform: translate(-20px, 12px);
+    transform: translate(0px, 12px);
 }
 
 
