@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
   <!-- CSS Reset -->
-  <link rel="stylesheet" href="../assets/css/phase-3.css/modern-normalize.css">
+  <link rel="stylesheet" href="../assets/css/phase-4.css/modern-normalize.css">
   <!-- Main CSS -->
-  <link rel="stylesheet" href="../assets/css/phase-3.css/main.css">
+  <link rel="stylesheet" href="../assets/css/phase-4.css/main.css">
 </head>
 
 <body class="container">
@@ -201,66 +201,75 @@
     <div class="last_mobile"></div>
     <div id="aside_frame">
       <aside class="mobile_view">
-        <section>
-          <h3>Ninja API App</h3>
+        <section id="aside-position-1">
+          <hr>
+          <h3 class="ninja-form">Ninja API App</h3>
           <section>
-            <h4>Pick from the following API's</h4>
-            <form action="ninja-api-form">
-              <label for="jokes-api">
-                <input type="checkbox" id="jokes-api" name="api-route" value="jokes">Jokes
-              </label>
-              <label for="recipe-api">
-                <input type="checkbox" id="recipe-api" name="api-route" value="recipe">Recipe
-              </label>
-              <label for="api-content">Enter content for API Call (e.g., number of jokes):</label>
+            <h4 class="ninja-form">*Select API's</h4>
+            <form class="ninja-form" action="ninja-api-form">
+              <div class="inline-checkbox">
+                <label for="jokes-api">
+                  <input type="checkbox" id="jokes-api" name="api-route" value="jokes">Jokes
+                </label>
+                <label for="recipe-api">
+                  <input type="checkbox" id="recipe-api" name="api-route" value="recipe">Recipe
+                </label>
+              </div>
+              <label for="api-content">Enter content for API Call <br>(e.g., number of jokes):</label>
               <input type="text" id="api-content" name="api-content" required>
               <button type="submit">Get Response</button>
               <div id="api-response"></div>
+              <div id="mobile-view-margin-bottom"></div>
             </form>
           </section>
           <footer>Sukhwan Ko</footer>
         </section>
-        <section>
-          <h3>Phase-3 Added Aside</h3>
+        <div id="hide-mobile-version">
           <section>
-            <h4>MAKE MY DAY, PC</h4>
-            <figure class="image">
-              <img src="../phase-3/evidence/Untitled-4-e1560239780934-1400x800.png" alt="Everything why?!" width="200">
-              <figcaption class="image-caption">
-                &copy; Copyright "Editorial team 1" from
-                <a
-                  href="https://blogs.egu.eu/divisions/gd/2019/07/03/it-doesnt-work-asking-questions-about-scientific-software/">EGU
-                  Blogs</a>
-              </figcaption>
-            </figure>
-            <p>
-              Chris Aitken, a designer and programmer from Camden, NSW, believes his story
-              proves that tech support is one of the most stressful jobs on earth. He recalls
-              working for a small internet provider in the late '90s, when one of the customers
-              was a local police officer.
-            </p>
-            <p>
-              "He was also an expert in crashing Windows 98. On one occasion, he brought his
-              tower into the office, sat it on the counter, pulled his service pistol out of
-              his holster and pointed it straight at the tower, threatening to shoot it.
-            </p>
-            <p>
-              Another time he put his (by now very nervous) PC tower onto the counter, again
-              took out his pistol, held it by the barrel and started banging the butt of the
-              gun onto the top of the computer, quite hard too.
-            </p>
-            <p>It's no wonder techies go grey - or bald - early!"</p>
-            <p>This is the first we've heard of someone trying to fix a computer by intimidating it.</p>
+            <hr>
+            <h3>Phase-3 Added Aside</h3>
+            <section>
+              <h4>MAKE MY DAY, PC</h4>
+              <figure class="image">
+                <img src="../phase-3/evidence/Untitled-4-e1560239780934-1400x800.png" alt="Everything why?!"
+                  width="200">
+                <figcaption class="image-caption">
+                  &copy; Copyright "Editorial team 1" from
+                  <a
+                    href="https://blogs.egu.eu/divisions/gd/2019/07/03/it-doesnt-work-asking-questions-about-scientific-software/">EGU
+                    Blogs</a>
+                </figcaption>
+              </figure>
+              <p>
+                Chris Aitken, a designer and programmer from Camden, NSW, believes his story
+                proves that tech support is one of the most stressful jobs on earth. He recalls
+                working for a small internet provider in the late '90s, when one of the customers
+                was a local police officer.
+              </p>
+              <p>
+                "He was also an expert in crashing Windows 98. On one occasion, he brought his
+                tower into the office, sat it on the counter, pulled his service pistol out of
+                his holster and pointed it straight at the tower, threatening to shoot it.
+              </p>
+              <p>
+                Another time he put his (by now very nervous) PC tower onto the counter, again
+                took out his pistol, held it by the barrel and started banging the butt of the
+                gun onto the top of the computer, quite hard too.
+              </p>
+              <p>It's no wonder techies go grey - or bald - early!"</p>
+              <p>This is the first we've heard of someone trying to fix a computer by intimidating it.</p>
+            </section>
+            <footer>Sukhwan Ko</footer>
           </section>
-          <footer>Sukhwan Ko</footer>
-        </section>
-        <section>
-          <h3>Aside section 3</h3>
           <section>
-            <h4>Aside section 3 contents</h4>
+            <hr>
+            <h3>Aside section 3</h3>
+            <section>
+              <h4>Aside section 3 contents</h4>
+            </section>
+            <footer>Sukhwan Ko</footer>
           </section>
-          <footer>Sukhwan Ko</footer>
-        </section>
+        </div>
       </aside>
     </div>
   </main>

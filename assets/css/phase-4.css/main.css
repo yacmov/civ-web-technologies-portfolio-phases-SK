@@ -1,0 +1,179 @@
+@import 'hamburger-menu.css';
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+:where(.header, .main, .footer){
+    padding: 10px;
+}
+
+.header {
+    /* Apply colour Ruddy blue  */
+    background-color: #79ADDC; 
+    color: white;
+}
+
+.main {
+    /* Apply colour Celadon */
+    background-color: #ADF7B6;
+    margin-top: 0px;
+}
+
+.footer {
+    /* Apply colour Lemon chiffon */
+    background-color: #FCF5C7;
+    color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+article {
+    border: 3px solid #FFC09F;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.last_mobile {
+    padding-bottom: 100px;
+}
+
+/* NOTE: */
+.mobile_view {
+    /* display: none; */
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.image {
+    margin: 0;
+}
+
+.image-caption {
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+    text-shadow: 1px 1px black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.ninja-form {
+    text-align: center;
+}
+
+.inline-checkbox {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+input[type=text], input[type="checkbox"] {
+    padding: 10px;
+    border: 3px solid #79ADDC;
+    border-radius: 4px;
+}
+
+#api-content {
+    width: 100%;
+}
+
+button[type="submit"] {
+    background-color: #79ADDC;
+    color: #fff;
+    font-weight: bolder;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#api-response {
+    border: none;
+    padding: 10px;
+    margin: 10px;
+}
+
+#mobile-view-margin-bottom {
+    padding-bottom: 100px;
+}
+
+
+#hide-mobile-version {
+    display: none;
+}
+
+
+
+@media screen and (min-width: 768px){
+    .mobile_view {
+        display: block;
+    }
+    .header {
+        position: fixed;
+        width: 100%;
+
+    }
+
+    .main {
+        margin: 133px 0px 105px 0;
+
+    }
+    #main_frame {
+        width: 70%;
+        float: left;
+        margin-left: 5%;
+    }
+
+    #aside_frame {
+        width: 20%;
+        padding-left: 2%;
+        margin-right: 5%;
+        float: right;
+    }
+
+    .footer {
+        
+    }
+
+    .last_mobile {
+        padding: 0%;
+    }
+
+    #hide-mobile-version {
+        display: block;
+    }
+
+    #mobile-view-margin-bottom {
+        padding: 0%;
+    }
+
+}
+
+
+@media screen and (min-width: 1200px) {
+    body {
+        font-size: 1.5rem;
+    }
+    .main {
+        margin: 190px 0px 145px 0;
+
+    }
+}
