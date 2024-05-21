@@ -63,7 +63,16 @@ Basic colour 2 and Additional colour 4 total 6 colour for this project
 
 ## Component Identification
 
-- [ ] [A sticky header](https://components.dev.screencraft.net.au/components/headers/)
-- [ ] [A “vertical card” with a header and footer and content,](https://components.dev.screencraft.net.au/components/cards/)
-- [ ] [A navigation bar,](https://components.dev.screencraft.net.au/components/navigations/)
-- [ ] [A footer,](https://components.dev.screencraft.net.au/components/footers/)
+- [x] [A header](https://components.dev.screencraft.net.au/components/headers/)
+- [x] [A navigation bar,](https://components.dev.screencraft.net.au/components/navigations/)
+- [x] [A footer,](https://components.dev.screencraft.net.au/components/footers/)
+- [x] [A “vertical card” with a header and footer and content,](https://components.dev.screencraft.net.au/components/cards/)
+- [x] [Centre content on screen](https://components.dev.screencraft.net.au/components/layouts//)
+
+## Testing Browsers
+
+- Chrome on mac
+  <br><img src="./phase-5/evidence/06-chrome.png" width="500">
+
+- Safari on mac
+  <br><img src="./phase-5/evidence/07-safari.png" width="500">
