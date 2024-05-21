@@ -60,3 +60,10 @@ Basic colour 2 and Additional colour 4 total 6 colour for this project
 | Peach         | 255, 192, 159 | #FFC09F | Additional colour 2 |
 | Lemon chiffon | 252, 245, 199 | #FCF5C7 | Additional colour 3 |
 | Celadon       | 173, 247, 182 | #ADF7B6 | Additional colour 4 |
+
+## Component Identification
+
+- [ ] [A sticky header](https://components.dev.screencraft.net.au/components/headers/)
+- [ ] [A “vertical card” with a header and footer and content,](https://components.dev.screencraft.net.au/components/cards/)
+- [ ] [A navigation bar,](https://components.dev.screencraft.net.au/components/navigations/)
+- [ ] [A footer,](https://components.dev.screencraft.net.au/components/footers/)
