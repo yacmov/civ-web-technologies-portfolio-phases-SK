@@ -64,6 +64,9 @@ function isChecked() {
     if (!checkTextBoxValue("recipeApi")) {
       return false;
     }
+    if (parameterValue === "") {
+    return false;
+    }
     chosenURL = apiUrls.recipeApi + parameterValue;
     console.log(chosenURL);
     return true;
@@ -72,6 +75,9 @@ function isChecked() {
     console.log("JokesApi checked");
     if (!checkTextBoxValue("jokesApi")) {
       return false;
+    }
+    if (parameterValue === "") {
+    return false;
     }
     chosenURL = apiUrls.jokesApi + parameterValue;
     console.log(chosenURL);
@@ -89,8 +95,17 @@ function checkTextBoxValue(selectedApi) {
   let apiContentInput = dom.getElementById("api-content");
   textBoxValue = apiContentInput.value;
   parameterValue = textBoxValue;
+  if (parameterValue.length === 0) {
+    console.log(`No value in text box for ${selectedApi}`);
+    alert(`No value in text box for ${selectedApi}`);
+  }
+
   if (selectedApi === "jokesApi") {
     // TODO: Check is it number?
+    if (parameterValue === "") {
+      return false;
+    }
+
     if (!parseFloat(textBoxValue)) {
       console.error("Text input not valid");
       alert("Chosen API allow number");
@@ -102,6 +117,12 @@ function checkTextBoxValue(selectedApi) {
       alert("Input between 1 to 30");
       return false;
     }
+  } else {
+    if (parseFloat(textBoxValue)){
+      console.error("Input not valid");
+      alert("Chosen API allow not a number");
+      return false;
+    }
   }
   return true;
 }
@@ -110,8 +131,11 @@ function displayResult() {
   if (jasonValue) {
     let target = dom.querySelector("#api-response");
     target.innerText = ""; // Clear previous content
-
-    if (parseFloat(parameterValue)) {
+    if (jasonValue.length === 0){
+      console.log("No data found");
+      target.innerText += "No data found";
+      return; 
+    }else if(parseFloat(parameterValue)) {
       for (let i = 0; i < jasonValue.length && i < parameterValue; i++) {
         target.innerText += i + 1 + ". " + jasonValue[i].joke + "\n\n";
       }
