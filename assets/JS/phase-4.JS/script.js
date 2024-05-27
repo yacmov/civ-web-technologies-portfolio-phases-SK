@@ -9,7 +9,8 @@ let jasonValue = null;
 // Store 2 chosen API URLs
 const apiUrls = {
   jokesApi: "https://api.api-ninjas.com/v1/jokes?limit=",
-  recipeApi: "https://api.api-ninjas.com/v1/recipe?query=",
+  recipeApi: "https://api.api-ninjas.cddsom/v1/recipe?query=",
+  // recipeApi: "https://api.api-ninjas.com/v1/recipe?query=",
 };
 
 // Get checkbox references
@@ -37,6 +38,9 @@ function callApi() {
       displayResult();
     })
     .catch((err) => {
+      let target = dom.querySelector("#api-response");
+      target.innerText = "";
+      target.innerText += `${err}`;
       console.error(`Error: ${err}`);
     });
 }
@@ -153,3 +157,20 @@ function displayResult() {
 }
 
 dom.getElementById("submit").addEventListener("click", clickButton, false);
+
+// Get references to the checkboxes
+const jokesApiCheckbox = checkboxes.jokesApi;
+const recipeApiCheckbox = checkboxes.recipeApi;
+
+// Add event listeners to each checkbox
+jokesApiCheckbox.addEventListener("click", () => {
+  if (jokesApiCheckbox.checked) {
+    recipeApiCheckbox.checked = false;
+  }
+});
+
+recipeApiCheckbox.addEventListener("click", () => {
+  if (recipeApiCheckbox.checked) {
+    jokesApiCheckbox.checked = false;
+  }
+});
