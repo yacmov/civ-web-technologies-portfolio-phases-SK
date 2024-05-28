@@ -4,12 +4,13 @@ const dom = document;
 // Set for responding API
 let chosenURL = "";
 let parameterValue = "";
-let jasonValue = null;
+let jsonValue = null;
 
 // Store 2 chosen API URLs
 const apiUrls = {
   jokesApi: "https://api.api-ninjas.com/v1/jokes?limit=",
   recipeApi: "https://api.api-ninjas.cddsom/v1/recipe?query=",
+  // for invalid api test
   // recipeApi: "https://api.api-ninjas.com/v1/recipe?query=",
 };
 
@@ -18,10 +19,6 @@ const checkboxes = {
   jokesApi: dom.querySelector("#jokes-api"),
   recipeApi: dom.querySelector("#recipe-api"),
 };
-
-// NOTE: Show value
-console.log(checkboxes.jokesApi);
-console.log(checkboxes.recipeApi);
 
 // Function to make the API call
 function callApi() {
@@ -33,8 +30,7 @@ function callApi() {
   fetch(chosenURL, options)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
-      jasonValue = data;
+      jsonValue = data;
       displayResult();
     })
     .catch((err) => {
@@ -59,37 +55,31 @@ function isChecked() {
   const errMessage = "Check 1 API";
   // NOTE: Selected all
   if (recipeApi && jokesApi) {
-    console.log(errMessage);
     alert(errMessage);
     return false;
     // NOTE: Selected recipeApi
   } else if (recipeApi) {
-    console.log("RecipeApi checked");
     if (!checkTextBoxValue("recipeApi")) {
       return false;
     }
     if (parameterValue === "") {
-    return false;
+      return false;
     }
     chosenURL = apiUrls.recipeApi + parameterValue;
-    console.log(chosenURL);
     return true;
     // NOTE: Selected jokesApi
   } else if (jokesApi) {
-    console.log("JokesApi checked");
     if (!checkTextBoxValue("jokesApi")) {
       return false;
     }
     if (parameterValue === "") {
-    return false;
+      return false;
     }
     chosenURL = apiUrls.jokesApi + parameterValue;
-    console.log(chosenURL);
     return true;
   }
   // NOTE: Select none
   else {
-    console.log(errMessage);
     alert(errMessage);
     return false;
   }
@@ -100,7 +90,6 @@ function checkTextBoxValue(selectedApi) {
   textBoxValue = apiContentInput.value;
   parameterValue = textBoxValue;
   if (parameterValue.length === 0) {
-    console.log(`No value in text box for ${selectedApi}`);
     alert(`No value in text box for ${selectedApi}`);
   }
 
@@ -111,19 +100,16 @@ function checkTextBoxValue(selectedApi) {
     }
 
     if (!parseFloat(textBoxValue)) {
-      console.error("Text input not valid");
       alert("Chosen API allow number");
       return false;
     }
     if (parseFloat(textBoxValue) < 0 || parseFloat(textBoxValue) > 30) {
       // The API's limitation range is between 1 to 30
-      console.error("Input between 1 to 30");
       alert("Input between 1 to 30");
       return false;
     }
   } else {
-    if (parseFloat(textBoxValue)){
-      console.error("Input not valid");
+    if (parseFloat(textBoxValue)) {
       alert("Chosen API allow not a number");
       return false;
     }
@@ -132,25 +118,24 @@ function checkTextBoxValue(selectedApi) {
 }
 
 function displayResult() {
-  if (jasonValue) {
+  if (jsonValue) {
     let target = dom.querySelector("#api-response");
     target.innerText = ""; // Clear previous content
-    if (jasonValue.length === 0){
-      console.log("No data found");
+    if (jsonValue.length === 0) {
       target.innerText += "No data found";
-      return; 
-    }else if(parseFloat(parameterValue)) {
-      for (let i = 0; i < jasonValue.length && i < parameterValue; i++) {
-        target.innerText += i + 1 + ". " + jasonValue[i].joke + "\n\n";
+      return;
+    } else if (parseFloat(parameterValue)) {
+      for (let i = 0; i < jsonValue.length && i < parameterValue; i++) {
+        target.innerText += i + 1 + ". " + jsonValue[i].joke + "\n\n";
       }
       return;
     } else if (!parseFloat(parameterValue)) {
-      for (let i = 0; i < jasonValue.length; i++) {
-        target.innerText += i + 1 + ". " + jasonValue[i].title + "\n\n";
+      for (let i = 0; i < jsonValue.length; i++) {
+        target.innerText += i + 1 + ". " + jsonValue[i].title + "\n\n";
       }
-      return
+      return;
     } else {
-      console.log("Data not yet available");
+      console.error("Data not yet available");
       return;
     }
   }
