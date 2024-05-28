@@ -9,9 +9,9 @@ let jsonValue = null;
 // Store 2 chosen API URLs
 const apiUrls = {
   jokesApi: "https://api.api-ninjas.com/v1/jokes?limit=",
-  recipeApi: "https://api.api-ninjas.cddsom/v1/recipe?query=",
+  recipeApi: "https://api.api-ninjas.com/v1/recipe?query=",
   // for invalid api test
-  // recipeApi: "https://api.api-ninjas.com/v1/recipe?query=",
+  // recipeApi: "https://api.api-ninjas.cddsom/v1/recipe?query=",
 };
 
 // Get checkbox references
