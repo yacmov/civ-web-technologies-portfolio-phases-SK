@@ -24,19 +24,36 @@ const checkboxes = {
 function callApi() {
   const options = {
     method: "GET",
+    // current API key
     headers: { "x-api-key": "x7HtPDSOZzLHE1JZ0F7QgQ==xXak6QMHw5RPoIGa" },
+
+    // for invalid api test
+    // headers: { "x-api-key": "aax7HtPDSOZzLHE1JZ0F7QgQ==xXak6QMHw5RPoIGa" },
   };
 
   fetch(chosenURL, options)
-    .then((res) => res.json())
+    .then((res) => {
+      if (res.ok) {
+        return res.json();
+      } else {
+        let target = dom.querySelector("#api-response");
+        target.innerText = "";
+        target.innerText += `${err}`;
+        target.innerText += `\nReason: Invalid API KEY`;
+        // console.error(`Error: ${err}`);
+        return;
+      }
+    })
     .then((data) => {
       jsonValue = data;
       displayResult();
     })
     .catch((err) => {
+      alert(err);
       let target = dom.querySelector("#api-response");
-      target.innerText = "";
-      target.innerText += `${err}`;
+      // target.innerText = "";
+      target.innerText += `\n${err}`;
+      target.innerText += `\nReason: Invalid API`;
       console.error(`Error: ${err}`);
     });
 }
@@ -45,6 +62,7 @@ function clickButton(event) {
   event.preventDefault();
   if (isChecked()) {
     callApi();
+
   }
 }
 
